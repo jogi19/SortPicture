@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import exifread
 f = open('2013-06-21 09.24.32.jpg')
 
@@ -11,6 +13,10 @@ for tag in tags.keys():
             print("Key: %s , value %s" % (tag, tags[tag]))
             print('#####################################')
         if "Image DateTime" in tag:
+            print('#####################################')
+            print("Key: %s , value %s" % (tag, tags[tag]))
+            print('#####################################')
+        if "DateTimeOriginal" in tag:
             print('#####################################')
             print("Key: %s , value %s" % (tag, tags[tag]))
             print('#####################################')
